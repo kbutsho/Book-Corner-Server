@@ -25,7 +25,6 @@ client.connect(err => {
             res.send(result.insertedCount > 0)
         })
 })
-
 app.get('/books', (req,res)=>{
   BooksCollection.find()
   .toArray((err,items)=>{
@@ -35,7 +34,7 @@ app.get('/books', (req,res)=>{
 })
 
 // read to UI
-app.get('/products', (req, res) => {
+app.get('/getBooks', (req, res) => {
   BooksCollection.find({})
       .toArray((err, documents) => {
           res.send(documents);
