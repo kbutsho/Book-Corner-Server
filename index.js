@@ -30,7 +30,6 @@ client.connect(err => {
         res.send(items);
       })
   })
-
   app.get('/getBooks', (req, res) => {
     BooksCollection.find({})
       .toArray((err, documents) => {
